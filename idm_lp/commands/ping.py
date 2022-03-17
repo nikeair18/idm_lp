@@ -19,7 +19,7 @@ async def get_ping(message: Message, answer: str) -> str:
         delta = "666"
 
     return f"{answer} Модуль ЛП\n" \
-           f"Ответ через {delta} с"
+           f"Скорость ответа {delta} с"
 
 
 @user.on.message_handler(FromMe(), text="<prefix:service_prefix> пинг")
@@ -27,7 +27,7 @@ async def get_ping(message: Message, answer: str) -> str:
 async def ping_wrapper(message: Message, **kwargs):
     await edit_message(
         message,
-        await get_ping(message, "ПОНГ")
+        await get_ping(message, "Афигеть у тебя бесплатное")
     )
 
 
